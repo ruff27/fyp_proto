@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Property - Real Estate Platform</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Real Estate Platform Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html">Buy</a></li>
+                <li><a href="listings.html">Rent</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <a href="#">বাংলা</a> | <a href="#">English</a>
+        </div>
+    </header>
+
+    <section class="sell-property">
+        <h2>Sell Your Property</h2>
+        <form>
+            <label for="property-type">Property Type:</label>
+            <select id="property-type">
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="land">Land</option>
+            </select>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter the location">
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" placeholder="Enter the price">
+
+            <label for="description">Description:</label>
+            <textarea id="description" placeholder="Provide a brief description of the property"></textarea>
+
+            <label for="image-upload">Upload Images:</label>
+            <input type="file" id="image-upload" accept="image/*">
+
+            <button type="submit">Submit Property</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Real Estate Platform. All rights reserved.</p>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
