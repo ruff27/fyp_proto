@@ -212,6 +212,47 @@ header .language-switcher a {
     background-color: #46207a;
 }
 
+/* Listing Filters Section */
+.listing-filters {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+.listing-filters h2 {
+    font-size: 24px;
+    color: #2b0263;
+}
+
+.filters form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filters label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.filters select, .filters button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filters button {
+    background-color: #2b0263;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #46207a;
+}
+
 /* Property Details Section */
 .property-details {
     padding: 20px;

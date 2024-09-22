@@ -31,20 +31,39 @@
         <div class="filters">
             <h2>Filter Properties</h2>
             <form>
-                <input type="text" placeholder="Enter suburb, city, or postcode...">
-                <select>
-                    <option value="">Property Type</option>
+                <!-- Location Filter -->
+                <label for="location">Location:</label>
+                <select id="location">
+                    <option value="">Select Location</option>
+                    <option value="basundhara">Basundhara, Dhaka</option>
+                    <option value="uttara">Uttara, Dhaka</option>
+                    <option value="mirpur">Mirpur, Dhaka</option>
+                    <option value="agrabad">Agrabad, Chattogram</option>
+                    <option value="gulshan">Gulshan, Dhaka</option>
+                </select>
+
+                <!-- Property Type Filter -->
+                <label for="property-type">Property Type:</label>
+                <select id="property-type">
+                    <option value="">Select Property Type</option>
+                    <option value="houseshare">Houseshare</option>
+                    <option value="roomshare">Roomshare</option>
+                    <option value="flat">Flat</option>
                     <option value="house">House</option>
-                    <option value="apartment">Apartment</option>
                     <option value="land">Land</option>
                 </select>
-                <select>
-                    <option value="">Price Range</option>
+
+                <!-- Price Range Filter -->
+                <label for="price-range">Price Range:</label>
+                <select id="price-range">
+                    <option value="">Select Price Range</option>
                     <option value="50000">Up to $50,000</option>
                     <option value="100000">$50,000 - $100,000</option>
                     <option value="200000">Above $100,000</option>
                 </select>
-                <button>Filter</button>
+
+                <!-- Submit Button -->
+                <button type="submit">Filter</button>
             </form>
         </div>
     </section>
