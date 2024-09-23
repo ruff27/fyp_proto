@@ -1,4 +1,4 @@
-/* Reset some default browser styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,73 +7,39 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Header Styles */
+/* Header */
 header {
-    background-color: #2b0263;
-    color: #fff;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #2b0263 !important;
+    padding: 15px 0;
 }
 
-header .logo img {
+header .nav-link {
+    font-weight: bold;
+    color: white !important;
+}
+
+header .nav-link:hover {
+    background-color: #46207a;
+}
+
+.logo img {
     height: 40px;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li {
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    padding: 10px 15px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    background-color: #46207a;
-    color: #fff;
-}
-
-header .language-switcher {
-    font-size: 14px;
-}
-
-header .language-switcher a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-/* Hero Section Styles */
+/* Hero Section */
 .hero {
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    background-color: #3e1b75; /* Matching the header tone */
+    background-color: #3e1b75 !important;
+    height: 350px !important;
 }
 
 .search-box {
-    background-color: #46207a;
+    background-color: #46207a !important;
     padding: 30px;
     border-radius: 10px;
-    color: #fff;
 }
 
 .search-box h2 {
@@ -81,61 +47,25 @@ header .language-switcher a {
     font-size: 24px;
 }
 
-.search-box input, .search-box select, .search-box button {
-    padding: 10px;
+.search-box .form-select, .search-box .btn {
     margin: 10px 0;
-    border: none;
     border-radius: 5px;
 }
 
-.search-box input, .search-box select {
-    width: 100%;
-    max-width: 300px;
-}
-
-.search-box button {
+.search-box .btn {
     background-color: #e67e22;
-    color: #fff;
-    cursor: pointer;
-    width: 100%;
-    max-width: 320px;
     font-size: 18px;
     padding: 12px;
-    transition: background 0.3s ease;
 }
 
-.search-box button:hover {
+.search-box .btn:hover {
     background-color: #d35400;
 }
 
-/* Featured Properties Section */
-.featured-properties {
-    padding: 20px;
-    background-color: #fff;
-}
-
-.featured-properties h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #2b0263; /* Matching header color */
-}
-
-.properties-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
+/* Featured Property Cards */
 .property-card {
-    background-color: #fff;
-    padding: 20px;
     border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
 
@@ -144,27 +74,15 @@ header .language-switcher a {
 }
 
 .property-card img {
-    width: 100%;
     border-radius: 10px 10px 0 0;
 }
 
-.property-card h3 {
-    margin: 15px 0;
-    font-size: 22px;
-}
-
-.property-card p {
-    margin-bottom: 10px;
-}
-
 .property-card button {
-    background-color: #46207a; /* Matching the header and hero */
+    background-color: #46207a;
     color: #fff;
     border: none;
-    padding: 10px 15px;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    padding: 10px;
     transition: background 0.3s ease;
 }
 
@@ -172,342 +90,22 @@ header .language-switcher a {
     background-color: #3e1b75;
 }
 
-/* Section for listing filters */
-.listing-filters {
+/* Profile & Forms */
+form {
     padding: 20px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ddd;
 }
 
-.listing-filters h2 {
-    font-size: 24px;
-    color: #2b0263;
-}
-
-.filters form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.filters input, .filters select, .filters button {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.filters input, .filters select {
-    flex: 1;
-}
-
-.filters button {
-    background-color: #2b0263;
+form .btn {
+    background-color: #46207a;
     color: #fff;
-    cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.filters button:hover {
-    background-color: #46207a;
-}
-
-/* Listing Filters Section */
-.listing-filters {
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ddd;
-}
-
-.listing-filters h2 {
-    font-size: 24px;
-    color: #2b0263;
-}
-
-.filters form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.filters label {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.filters select, .filters button {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.filters button {
-    background-color: #2b0263;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.filters button:hover {
-    background-color: #46207a;
-}
-
-/* Property Details Section */
-.property-details {
-    padding: 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.property-details img {
-    width: 80%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.property-details h2 {
-    font-size: 28px;
-    color: #2b0263;
-}
-
-.property-details p {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-.property-details button {
-    background-color: #46207a;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.property-details button:hover {
+form .btn:hover {
     background-color: #3e1b75;
 }
 
-/* User Profile Section */
-.profile {
-    padding: 20px;
-    background-color: #fff;
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.profile h2 {
-    font-size: 28px;
-    color: #2b0263;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.profile form {
-    display: flex;
-    flex-direction: column;
-}
-
-.profile form label {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.profile form input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.profile form button {
-    background-color: #2b0263;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.profile form button:hover {
-    background-color: #46207a;
-}
-
-/* Contact Section */
-.contact {
-    padding: 20px;
-    background-color: #fff;
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact h2 {
-    font-size: 28px;
-    color: #2b0263;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact form label {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.contact form input, .contact form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.contact form textarea {
-    resize: vertical;
-}
-
-.contact form button {
-    background-color: #2b0263;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact form button:hover {
-    background-color: #46207a;
-}
-
-/* Login and Signup Forms */
-.login, .signup {
-    max-width: 400px;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.login h2, .signup h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2b0263;
-    font-size: 28px;
-}
-
-.login form, .signup form {
-    display: flex;
-    flex-direction: column;
-}
-
-.login form label, .signup form label {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.login form input, .signup form input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.login form button, .signup form button {
-    background-color: #2b0263;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background 0.3s ease;
-}
-
-.login form button:hover, .signup form button:hover {
-    background-color: #46207a;
-}
-
-.login p, .signup p {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.login p a, .signup p a {
-    color: #2b0263;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.login p a:hover, .signup p a:hover {
-    text-decoration: underline;
-}
-
-/* Sell Property Form */
-.sell-property {
-    max-width: 600px;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.sell-property h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2b0263;
-    font-size: 28px;
-}
-
-.sell-property form {
-    display: flex;
-    flex-direction: column;
-}
-
-.sell-property form label {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.sell-property form input, .sell-property form textarea, .sell-property form select {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.sell-property form button {
-    background-color: #2b0263;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background 0.3s ease;
-}
-
-.sell-property form button:hover {
-    background-color: #46207a;
-}
-
-
-/* Footer Styles */
+/* Footer */
 footer {
     background-color: #2b0263;
     color: #fff;
@@ -515,33 +113,67 @@ footer {
     padding: 20px;
 }
 
-footer p {
-    margin-bottom: 10px;
-}
-
-footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-footer ul li {
-    margin: 0 10px;
-}
-
-footer ul li a {
+footer .nav-link {
     color: #fff;
-    text-decoration: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .properties-grid {
-        flex-direction: column;
-        align-items: center;
-    }
+footer .nav-link:hover {
+    text-decoration: underline;
+}
 
+/* Responsive */
+@media (max-width: 768px) {
     .property-card {
         width: 90%;
+        margin: 0 auto;
     }
+}
+/* Chat Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+    margin: 100px auto;
+    max-width: 500px;
+}
+
+.modal-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    padding: 10px 0;
+}
+
+.user-message {
+    background-color: #e9f5ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.abdul-message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: left;
 }

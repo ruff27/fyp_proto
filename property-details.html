@@ -4,46 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Details - Real Estate Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Real Estate Platform Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="listings.html">Buy</a></li>
-                <li><a href="listings.html">Rent</a></li>
-                <li><a href="sell.html">Sell</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
-        <div class="language-switcher">
-            <a href="#">বাংলা</a> | <a href="#">English</a>
+    <header class="bg-dark text-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="images/logo.png" alt="Real Estate Platform Logo" class="img-fluid" style="height: 40px;">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link text-light">Home</a></li>
+                    <li class="nav-item"><a href="listings.html" class="nav-link text-light">Buy</a></li>
+                    <li class="nav-item"><a href="listings.html" class="nav-link text-light">Rent</a></li>
+                    <li class="nav-item"><a href="sell.html" class="nav-link text-light">Sell</a></li>
+                    <li class="nav-item"><a href="profile.html" class="nav-link text-light">Profile</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link text-light">Login</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <a href="#" class="text-light">বাংলা</a> | <a href="#" class="text-light">English</a>
+            </div>
         </div>
     </header>
 
-    <section class="property-details">
-        <h2>Luxury Apartment</h2>
-        <img src="images/p1.avif" alt="Luxury Apartment in Dhaka">
-        <p><strong>Location:</strong> Dhaka</p>
-        <p><strong>Price:</strong> $300,000</p>
-        <p><strong>Description:</strong> This luxury apartment features 3 bedrooms, 2 bathrooms, and a spacious living area. It's located in the heart of Dhaka, close to all amenities. Perfect for families and professionals alike.</p>
-        <p><strong>Contact:</strong> +880123456789 | <a href="mailto:landlord@example.com">landlord@example.com</a></p>
-        <button>Contact Agent</button>
+    <section class="property-details my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/p1.avif" class="img-fluid rounded" alt="Property Image">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-primary">Luxury Apartment in Dhaka</h2>
+                    <p><strong>Location:</strong> Dhaka</p>
+                    <p><strong>Price:</strong> BDT 8,00,000</p>
+                    <p><strong>Description:</strong> A luxury 1-bedroom apartment in the heart of Dhaka with modern amenities, a spacious layout, and prime location close to shopping, schools, and transportation.</p>
+                    <button class="btn btn-primary" onclick="openChat()">Contact Abdul</button>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
+    <!-- Chat Modal -->
+    <div id="chatModal" class="modal" style="display:none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chat with Abdul</h5>
+                    <button type="button" class="btn-close" onclick="closeChat()"></button>
+                </div>
+                <div class="modal-body" id="chat-box" style="max-height: 300px; overflow-y: auto;">
+                    <!-- Chat messages will be appended here -->
+                </div>
+                <div class="modal-footer">
+                    <input type="text" id="userMessage" class="form-control" placeholder="Type your message">
+                    <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light py-3 text-center">
         <p>&copy; 2024 Real Estate Platform. All rights reserved.</p>
-        <ul>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a href="contact.html" class="nav-link text-light">Contact Us</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light">Privacy Policy</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light">Terms of Service</a></li>
         </ul>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Chat Modal Script -->
+    <script>
+        // Open chat modal
+        function openChat() {
+            document.getElementById('chatModal').style.display = 'block';
+        }
+
+        // Close chat modal
+        function closeChat() {
+            document.getElementById('chatModal').style.display = 'none';
+        }
+
+        // Send message in chat
+        function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value;
+            const chatBox = document.getElementById('chat-box');
+
+            if (userMessage.trim() !== '') {
+                // Create message bubble for user
+                const userMessageBubble = document.createElement('div');
+                userMessageBubble.classList.add('user-message');
+                userMessageBubble.innerHTML = `<strong>You:</strong> ${userMessage}`;
+                chatBox.appendChild(userMessageBubble);
+
+                // Clear input field
+                document.getElementById('userMessage').value = '';
+
+                // Simulate Abdul's response
+                setTimeout(function() {
+                    const abdulMessageBubble = document.createElement('div');
+                    abdulMessageBubble.classList.add('abdul-message');
+                    abdulMessageBubble.innerHTML = `<strong>Abdul:</strong> Thank you for your message. I'll respond shortly.`;
+                    chatBox.appendChild(abdulMessageBubble);
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }, 1000);
+
+                // Scroll to the bottom of chat
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+    </script>
+
 </body>
 </html>

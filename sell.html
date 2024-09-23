@@ -3,63 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sell Your Property - Real Estate Platform</title>
+    <title>Sell Property - Real Estate Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Real Estate Platform Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="listings.html">Buy</a></li>
-                <li><a href="listings.html">Rent</a></li>
-                <li><a href="sell.html">Sell</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
-        <div class="language-switcher">
-            <a href="#">বাংলা</a> | <a href="#">English</a>
+    <header class="bg-dark text-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <img src="images/logo.png" alt="Real Estate Platform Logo" class="img-fluid" style="height: 40px;">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link text-light">Home</a></li>
+                    <li class="nav-item"><a href="listings.html" class="nav-link text-light">Buy</a></li>
+                    <li class="nav-item"><a href="listings.html" class="nav-link text-light">Rent</a></li>
+                    <li class="nav-item"><a href="sell.html" class="nav-link text-light">Sell</a></li>
+                    <li class="nav-item"><a href="profile.html" class="nav-link text-light">Profile</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link text-light">Login</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <a href="#" class="text-light">বাংলা</a> | <a href="#" class="text-light">English</a>
+            </div>
         </div>
     </header>
 
-    <section class="sell-property">
-        <h2>Sell Your Property</h2>
-        <form>
-            <label for="property-type">Property Type:</label>
-            <select id="property-type">
-                <option value="house">House</option>
-                <option value="apartment">Apartment</option>
-                <option value="land">Land</option>
-            </select>
-
-            <label for="location">Location:</label>
-            <input type="text" id="location" placeholder="Enter the location">
-
-            <label for="price">Price:</label>
-            <input type="number" id="price" placeholder="Enter the price">
-
-            <label for="description">Description:</label>
-            <textarea id="description" placeholder="Provide a brief description of the property"></textarea>
-
-            <label for="image-upload">Upload Images:</label>
-            <input type="file" id="image-upload" accept="image/*">
-
-            <button type="submit">Submit Property</button>
-        </form>
+    <section class="sell-property my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h2 class="text-center">Sell Your Property</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="property-title" class="form-label">Property Title:</label>
+                                    <input type="text" class="form-control" id="property-title" placeholder="Enter property title">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="property-location" class="form-label">Location:</label>
+                                    <select id="property-location" class="form-select">
+                                        <option value="">Select Location</option>
+                                        <option value="basundhara">Basundhara, Dhaka</option>
+                                        <option value="uttara">Uttara, Dhaka</option>
+                                        <option value="mirpur">Mirpur, Dhaka</option>
+                                        <option value="agrabad">Agrabad, Chattogram</option>
+                                        <option value="gulshan">Gulshan, Dhaka</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="property-type" class="form-label">Property Type:</label>
+                                    <select id="property-type" class="form-select">
+                                        <option value="">Select Property Type</option>
+                                        <option value="1-bed">1 Bed Apartment</option>
+                                        <option value="2-bed">2 Bed Apartment</option>
+                                        <option value="3-bed">3 Bed Apartment</option>
+                                        <option value="house">House</option>
+                                        <option value="land">Land</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="price" class="form-label">Price (BDT):</label>
+                                    <input type="number" class="form-control" id="price" placeholder="Enter price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="property-description" class="form-label">Property Description:</label>
+                                    <textarea class="form-control" id="property-description" rows="4" placeholder="Enter property description"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="property-image" class="form-label">Property Image:</label>
+                                    <input type="file" class="form-control" id="property-image">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Submit Listing</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
+    <footer class="bg-dark text-light py-3 text-center">
         <p>&copy; 2024 Real Estate Platform. All rights reserved.</p>
-        <ul>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a href="contact.html" class="nav-link text-light">Contact Us</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light">Privacy Policy</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-light">Terms of Service</a></li>
         </ul>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
